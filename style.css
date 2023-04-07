@@ -1,29 +1,19 @@
-@media (max-width: 375px) {
-    .box {
-      height: 300px;
-      width: 300px;
-    }
-  
-    form h1 {
-      font-size: 40px;
-    }
-  
-    .logo {
-      width: 100%;
-      margin-top: 30px;
-    }
-  
-    input[type="email"],
-    input[type="password"],
-    input[type="text"] {
-      font-size: 14px;
-    }
-  
-    input[type="submit"] {
-      font-size: 16px;
-      margin-top: 30px;
-    }
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  input[type="email"],
+  input[type="password"],
+  input[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
   }
+  
+  input[type="submit"] {
+    height: 40px;
+  }
+}
+
   
 * {
     margin: 0;
