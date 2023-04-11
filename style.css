@@ -57,10 +57,10 @@ form a {
     font-size: 16px;
     margin-top: 10px;
     font-weight: 700;
-    color: #000;
+    color: #92E3A9;
     width: 100%;
     text-align: center;
-    opacity: 0.31;
+    opacity: 0.70;
 }
 
 form a:last-child {
@@ -89,9 +89,9 @@ input[type="text"] {
 input[type="submit"] {
     width: 50%;
     padding: 10px;
-    border-radius: 1px;
-    background-color: #92E3A9;
-    color: #DAD6D6;
+    border-radius: 3px;
+    background-color: #263238;
+    color: #c2c3c4;
     cursor: pointer;
     font-weight: 700;
     font-size: 18px;
