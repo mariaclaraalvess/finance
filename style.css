@@ -47,6 +47,15 @@ form h1 {
     opacity: 0.35;
 }
 
+legenda {
+    font-family: 'Inter', cursive;
+    color: #92E3A9;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 50px;
+    margin-bottom: 60px; /* adicionado */
+}
+
 legend {
     font-family: 'Inter', cursive;
     color: #92E3A9;
@@ -61,6 +70,12 @@ legend {
     height: auto;
     margin-top: 2px;
     opacity: 0.35;
+}
+
+.logo {
+    width: 200px; /* aumentando para 200 pixels */
+    height: auto;
+    margin-top: 2px;
 }
 
 
