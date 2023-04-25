@@ -44,14 +44,25 @@ form h1 {
     color: #92E3A9;
     font-size: 60px;
     font-weight: 400;
-    margin-top: -60px;
+    opacity: 0.35;
+}
+
+legend {
+    font-family: 'Inter', cursive;
+    color: #92E3A9;
+    font-size: 60px;
+    font-weight: 800;
+    margin-top: 50px;
+    margin-bottom: 60px; /* adicionado */
 }
 
 .logo {
-    width: calc(30% + 40px);
+    width: 200px; /* aumentando para 200 pixels */
     height: auto;
-    margin-top: 10px;
+    margin-top: 2px;
+    opacity: 0.35;
 }
+
 
 form a {
     font-size: 16px;
@@ -60,7 +71,7 @@ form a {
     color: #92E3A9;
     width: 100%;
     text-align: center;
-    opacity: 0.70;
+    opacity: 0.90;
 }
 
 form a:last-child {
