@@ -73,6 +73,7 @@ form a:hover {
 
 input[type="email"],
 input[type="password"],
+input[type="name"],
 input[type="text"] {
     color: rgba(0, 0, 0, 0.33);
     width: 70%;
