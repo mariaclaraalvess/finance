@@ -46,6 +46,13 @@ form h1 {
     font-weight: 400;
 }
 
+form legendr {
+    font-family: 'Girassol', cursive;
+    color: #92E3A9;
+    font-size: 25px;
+    font-weight: 400;
+}
+
 form h2 {
     font-family: 'Girassol', cursive;
     color: #92E3A9;
