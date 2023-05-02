@@ -46,20 +46,11 @@ form h1 {
     font-weight: 400;
 }
 
-form legendr {
+legendr {
     font-family: 'Girassol', cursive;
     color: #92E3A9;
     font-size: 25px;
     font-weight: 400;
-    width: 70%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    background-color: #F9F7F7;
 }
 
 form h2 {
