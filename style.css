@@ -53,6 +53,7 @@ legendr {
     font-weight: 800;
     margin-top: 50px;
     margin-bottom: 60px; /* adicionado */
+    text-align: center;
 }
 
 form h2 {
