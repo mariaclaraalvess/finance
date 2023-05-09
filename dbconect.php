@@ -1,11 +1,9 @@
 <?php
 
 //definindo váriavéis 
-
-$servername = "%";
-$database = "finance";
-$username = "Admin";
-$password = "admin123";
+$servername = "localhost";
+$username = "root";
+$password = "";
 $dbname = "finance";
 
 // Criando conexão

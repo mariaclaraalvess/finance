@@ -1,8 +1,8 @@
 <?php
 // Estabelece a conexão com o banco de dados
-$servername = "%";
-$username = "Admin";
-$password = "admin123";
+$servername = "localhost";
+$username = "root";
+$password = "";
 $dbname = "finance";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -17,7 +17,7 @@ $email = $_POST["email"];
 $senha = $_POST["senha"];
 
 // Consulta SQL para inserir os dados na tabela
-$sql = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+$sql = "INSERT INTO cadastro (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
 // Executar a consulta SQL
 if ($conn->query($sql) === TRUE) {

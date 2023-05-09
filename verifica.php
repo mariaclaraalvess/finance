@@ -1,10 +1,10 @@
 <?php
 
 // Conectar ao banco de dados MySQL
-$host = "%"; // nome do host
-$user = "Admin"; // nome de usuário do banco de dados
-$pass = "admin123"; // senha do banco de dados
-$db = "finance"; // nome do banco de dados
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "finance";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
@@ -18,7 +18,7 @@ $email = $_POST["email"];
 $senha = $_POST["senha"];
 
 // Preparar a consulta SQL com parâmetros
-$sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
+$sql = "SELECT * FROM cadastro WHERE email = ? AND senha = ?";
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "ss", $email, $senha);
 
