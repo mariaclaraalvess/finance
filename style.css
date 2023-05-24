@@ -16,6 +16,7 @@ body {
       
 }
 
+
 .container {
     height: 100vh;
     width: 100vw;
@@ -139,6 +140,9 @@ input[type="submit"] {
     font-weight: 700;
     font-size: 18px;
     margin-top: 20px;
+    pointer-events: auto;
+    }
+    
 }
 
 input[type="submit"]:hover {
