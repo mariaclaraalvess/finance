@@ -1,147 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-body {
-    font-family: 'Inter', 'sans-serif', 'Girassol', 'Arial';
-        background-color: #3F4C53;
-      
-}
-
-
-.container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.box {
-    height: 400px;
-    width: 400px;
-}
-
-form {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-form h1 {
-    font-family: 'Girassol', cursive;
-    color: #92E3A9;
-    font-size: 60px;
-    font-weight: 400;
-}
-
-legendr {
-    font-family: 'Inter', cursive;
-    color: #92E3A9;
-    font-size: 20px;
-    margin-top: 50px;
-    margin-bottom: 60px; /* adicionado */
-    text-align: center;
-}
-
-form h2 {
-    font-family: 'Girassol', cursive;
-    color: #92E3A9;
-    font-size: 60px;
-    font-weight: 400;
-    opacity: 0.35;
-}
-
-legenda {
-    font-family: 'Inter', cursive;
-    color: #92E3A9;
-    font-size: 30px;
-    font-weight: 800;
-    margin-top: 50px;
-    margin-bottom: 60px; /* adicionado */
-}
-
-legend {
-    font-family: 'Inter', cursive;
-    color: #92E3A9;
-    font-size: 60px;
-    font-weight: 800;
-    margin-top: 50px;
-    margin-bottom: 60px; /* adicionado */
-}
-
-.logo {
-    width: 200px; /* aumentando para 200 pixels */
-    height: auto;
-    margin-top: 2px;
-    opacity: 0.35;
-}
-
-.log {
-    width: 200px; /* aumentando para 200 pixels */
-    height: auto;
-    margin-top: 2px;
-}
-
-
-form a {
-    font-size: 16px;
-    margin-top: 10px;
-    font-weight: 700;
-    color: #92E3A9;
-    width: 100%;
-    text-align: center;
-    opacity: 0.90;
-}
-
-form a:last-child {
-    margin-bottom: 20px;
-}
-
-form a:hover {
-    color: #4CAF50;
-}
-
-input[type="email"],
-input[type="password"],
-input[type="name"],
-input[type="text"] {
-    color: rgba(0, 0, 0, 0.33);
-    width: 70%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    background-color: #F9F7F7;
-}
-
-input[type="submit"] {
-    width: 50%;
-    padding: 10px;
-    border-radius: 3px;
-    background-color: #263238;
-    color: #c2c3c4;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 20px;
-    pointer-events: auto;
-    }
-    
-input[type="submit"]:hover {
-    background-color: #333;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <form method="post" action="inserir.php">
+                <legend>Cadastrar-se</legend>
+                <input id="nome" type="name" placeholder="nome" name="nome" required>
+                <input id="email" type="email" placeholder="email" name="email" required>
+                <input id="senha" type="password" placeholder="senha" name="senha" required>
+                <input id="cadastro" class="button" type="submit" value="Cadastre-se">
+                <img class="logo" src="https://raw.githubusercontent.com/mariaclaraalvess/finance/main/porquinho.png.png" alt="Porquinho" style="margin-top: -50px">
+                <h2>finance</h2>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
