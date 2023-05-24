@@ -143,8 +143,6 @@ input[type="submit"] {
     pointer-events: auto;
     }
     
-}
-
 input[type="submit"]:hover {
     background-color: #333;
 }
