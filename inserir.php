@@ -17,7 +17,7 @@ $email = $_POST["email"];
 $senha = $_POST["senha"];
 
 // Consulta SQL para inserir os dados na tabela
-$sql = "INSERT INTO cadastro (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+$sql = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
 // Executar a consulta SQL
 if ($conn->query($sql) === TRUE) {

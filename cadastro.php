@@ -16,16 +16,24 @@ $nome = $_POST["nome"];
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
-// Consulta SQL para inserir os dados na tabela
-$sql = "INSERT INTO cadastro (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+// Limpar os dados para evitar injeção de SQL (recomendado)
+$nome = mysqli_real_escape_string($conn, $nome);
+$email = mysqli_real_escape_string($conn, $email);
+$senha = mysqli_real_escape_string($conn, $senha);
 
-// Executar a consulta SQL
-if ($conn->query($sql) === TRUE) {
+// Consulta SQL para inserir os dados na tabela correta ("usuario" em vez de "cadastro")
+$sql = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+
+// Executar a consulta SQL usando declaração preparada
+$stmt = mysqli_prepare($conn, $sql);
+if ($stmt) {
+    mysqli_stmt_execute($stmt);
     echo "Dados inseridos com sucesso!";
 } else {
-    echo "Erro ao inserir os dados: " . $conn->error;
+    echo "Erro ao inserir os dados: " . mysqli_error($conn);
 }
 
-// Fechar a conexão com o banco de dados
-$conn->close();
+// Fechar a declaração e a conexão com o banco de dados
+mysqli_stmt_close($stmt);
+mysqli_close($conn);
 ?>

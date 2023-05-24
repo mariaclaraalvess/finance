@@ -1,20 +1,17 @@
-<?php
-
-//definindo váriavéis 
+// Definindo as variáveis
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "finance";
 
-// Criando conexão
+// Criando a conexão
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-// Checando conexão
-
+// Checando a conexão
 if (!$conn) {
-    die("Conexão falhou " . mysqli_connect_error());
+    die("Conexão falhou: " . mysqli_connect_error());
 }
+
 echo "Sucesso na conexão";
+
 mysqli_close($conn);
-?>
