@@ -12,20 +12,31 @@ if (!$conn) {
     die("Conexão falhou: " . mysqli_connect_error());
 }
 
-$nome = $_POST["nome"];
-$email = $_POST["email"];
-$senha = $_POST["senha"];
+// Verifica se o formulário foi enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtém os valores do formulário
+    $nome = $_POST["nome"];
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
 
-// Consulta SQL para inserir os dados na tabela
-$sql = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+    // Limpar os dados para evitar injeção de SQL (recomendado)
+    $nome = mysqli_real_escape_string($conn, $nome);
+    $email = mysqli_real_escape_string($conn, $email);
+    $senha = mysqli_real_escape_string($conn, $senha);
 
-// Executar a consulta SQL
-if ($conn->query($sql) === TRUE) {
-    echo "Dados inseridos com sucesso!";
-} else {
-    echo "Erro ao inserir os dados: " . $conn->error;
+    // Consulta SQL para inserir os dados na tabela
+    $sql = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+
+    // Executar a consulta SQL
+    if (mysqli_query($conn, $sql)) {
+        // Redireciona para a tela de login após o cadastro
+        header("Location: login.php");
+        exit;
+    } else {
+        echo "Erro ao inserir os dados: " . mysqli_error($conn);
+    }
 }
 
 // Fechar a conexão com o banco de dados
-$conn->close();
+mysqli_close($conn);
 ?>
